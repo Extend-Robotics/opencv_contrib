@@ -16,6 +16,8 @@ namespace kinfu {
 //! @addtogroup kinect_fusion
 //! @{
 
+CV_EXPORTS_W void renderPointsNormals(InputArray _points, InputArray _normals, OutputArray image, cv::Affine3f lightPose);
+    
 struct CV_EXPORTS_W Params
 {
 
@@ -219,7 +221,7 @@ public:
     */
 
     CV_WRAP virtual void render(OutputArray image, const Matx44f& cameraPose) const = 0;
-
+    
     /** @brief Gets points and normals of current 3d mesh
 
       The order of normals corresponds to order of points.
