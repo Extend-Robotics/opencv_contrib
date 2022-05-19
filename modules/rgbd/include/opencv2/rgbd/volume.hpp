@@ -44,6 +44,10 @@ class CV_EXPORTS_W Volume
         CV_Error(cv::Error::StsBadFunc, "This volume doesn't support vertex colors");
     }
     virtual void reset()                                                                       = 0;
+    virtual Mat getVolume() const
+    {
+        CV_Error(cv::Error::StsBadFunc, "This volume doesn't support dumping volume");
+    }
 
    public:
     const float voxelSize;

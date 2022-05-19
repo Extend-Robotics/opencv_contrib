@@ -111,6 +111,11 @@ class TSDFVolumeGPU : public TSDFVolume
 
     virtual void reset() override;
 
+    virtual Mat getVolume() const override
+    {
+        return volume.getMat(ACCESS_READ);
+    }
+
     Vec6f frameParams;
     UMat pixNorms;
     // See zFirstMemOrder arg of parent class constructor
