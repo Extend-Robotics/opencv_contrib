@@ -97,6 +97,7 @@ void makeColoredFrameFromDepth(InputArray _depth, InputArray _rgb,
 void buildPyramidPointsNormals(InputArray _points, InputArray _normals,
                                OutputArrayOfArrays pyrPoints, OutputArrayOfArrays pyrNormals,
                                int levels);
+bool customBilateralFilterGpu(const UMat src, UMat& dst, int kernelSize, float sigmaDepth, float sigmaSpatial);
 
 } // namespace kinfu
 } // namespace cv

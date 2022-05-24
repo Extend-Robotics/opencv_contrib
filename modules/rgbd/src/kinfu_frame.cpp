@@ -465,7 +465,7 @@ static bool ocl_buildPyramidPointsNormals(const UMat points, const UMat normals,
 
 static bool computePointsNormalsGpu(const Intr intr, float depthFactor, const UMat& depth, UMat& points, UMat& normals);
 static bool pyrDownBilateralGpu(const UMat& depth, UMat& depthDown, float sigma);
-static bool customBilateralFilterGpu(const UMat src, UMat& dst, int kernelSize, float sigmaDepth, float sigmaSpatial);
+bool customBilateralFilterGpu(const UMat src, UMat& dst, int kernelSize, float sigmaDepth, float sigmaSpatial);
 static bool pyrDownPointsNormalsGpu(const UMat p, const UMat n, UMat &pdown, UMat &ndown);
 
 

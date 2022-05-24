@@ -17,6 +17,8 @@ namespace kinfu {
 //! @{
 
 CV_EXPORTS_W void renderPointsNormals(InputArray _points, InputArray _normals, OutputArray image, cv::Affine3f lightPose);
+CV_EXPORTS_W bool customBilateralFilterGpu(const UMat src, UMat& dst, int kernelSize, float sigmaDepth, float sigmaSpatial);
+
     
 struct CV_EXPORTS_W Params
 {
